@@ -1,2 +1,4 @@
 #!/bin/bash 
-echo "Created a file for the simulation of Snake and Ladder game"
+noOfPlayers=1
+startPosition=0
+echo "Snake and ladder game played with only $noOfPlayers player at start position $startPosition"
