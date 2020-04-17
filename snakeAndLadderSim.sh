@@ -1,5 +1,6 @@
 #!/bin/bash 
-NUM_OF_PLAYERS=2
+NUM_OF_PLAYERS=0
+MAX_PLAYERS=4
 START_POSITION=0
 currentPosition=0
 IS_LADDER=0
@@ -9,6 +10,18 @@ WINNING_POSITION=100
 timesDiceRolled=0
 declare -A playerPosition
 
+echo "Enter number of players u want to play(maximum 4)"
+
+while(true)
+	do
+		read NUM_OF_PLAYERS
+		if [ $NUM_OF_PLAYERS -le $MAX_PLAYERS ]
+			then
+				break;
+		else
+				echo "$NUM_OF_PLAYERS cant be played... maximum $MAX_PLAYERS can play. So enter again"
+		fi
+	done
 
 makingMove(){
 
